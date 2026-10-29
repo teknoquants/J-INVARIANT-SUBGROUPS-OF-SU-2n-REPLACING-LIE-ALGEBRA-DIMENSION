@@ -1,0 +1,39 @@
+
+Theorem 4.2  algebraic consistency of r -> 1 + (r-1)/t^2 (cited: Dykema, Radulescu)
+-----------------------------------------------------------------------------------
+  [PASS] (L(F_r)_s)_t = L(F_r)_(st) (group action), 2000 exact rational cases
+  [PASS] f_(1/t) inverts f_t
+  [PASS] parameter stays > 1
+  [PASS] t = 1/k reproduces Voiculescu's L(F_n)_(1/k) = L(F_(1+k^2(n-1)))
+  [NOTE] Theorem 4.2 itself is a cited theorem about infinite-dimensional algebras and is not computable
+
+Proposition 4.3  M_2(L(F_k)) = L(F_((k+3)/4)); same complexification (Exercise 6)
+---------------------------------------------------------------------------------
+  [PASS] 1 + (k-1)/2^2 = (k+3)/4 exactly, k = 2..1000
+  [PASS] same identity for 1000 random rational k > 1
+  [PASS] k = 5 gives L(F_2)
+  [PASS] H (x)_R C = M_2(C): phi is multiplicative and its C-span is all of M_2(C)
+  [PASS] finite model A = R[S_3]: (A (x)_R H) (x)_R C has the same C-span as M_2(A (x)_R C)
+
+Remark 4.4  complexification does not reflect isomorphism
+---------------------------------------------------------
+  [PASS] every nonzero quaternion is invertible: det phi(q) = |q|^2 > 0 (H is a division algebra)
+  [PASS] M_2(R) has a nonzero nilpotent, so M_2(R) is not isomorphic to H
+  [PASS] both complexify to M_2(C)
+  [NOTE] whether L_H(F_5) and L_R(F_2) are isomorphic is open (Problem 2) and is not tested
+
+Conjecture 4.5  d_beta(N) and why the draft 'Theorem 4.3' is withdrawn
+----------------------------------------------------------------------
+  [PASS] d_beta(N) = N + beta N(N-1)/2 from explicit bases, beta = 1, 2, 4, N = 1..5
+  [PASS] log-volumes in spaces of different dimension differ at order N^2 log N (not O(1/N))
+  [PASS] (S1,S2,S1) counterexample: moment errors <= eps force tr((Y1-Y3)^2) <= 4 eps
+  [PASS] beta=1: independent ensembles are asymptotically free (tr A^2 ~ 1, tr A^2B^2 ~ 1, tr ABAB ~ 0)
+  [PASS] beta=2: independent ensembles are asymptotically free (tr A^2 ~ 1, tr A^2B^2 ~ 1, tr ABAB ~ 0)
+  [PASS] beta=4: independent ensembles are asymptotically free (tr A^2 ~ 1, tr A^2B^2 ~ 1, tr ABAB ~ 0)
+  [NOTE] Conjecture 4.5 itself is open and is not tested
+
+Question 4.6
+------------
+  [NOTE] Question 4.6 is open; no computation applies
+
+Section 4: 18/18 checks passed

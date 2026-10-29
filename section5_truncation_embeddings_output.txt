@@ -1,0 +1,51 @@
+
+Definition 5.1  truncation projection and encoding isometry
+-----------------------------------------------------------
+  [PASS] P_jmax is an orthogonal projection (P^2 = P = P^dag)
+  [PASS] an isometry V: P H -> (C^2)^(x)3 exists when dim P H = 6 <= 2^n = 8
+
+Proposition 5.2  truncation preserves positivity
+------------------------------------------------
+  [PASS] trial 0: <tA,A> = <tPA,PA> + 2Re<tPA,QA> + <tQA,QA>, and <tPA,PA> >= 0
+  [PASS] trial 1: <tA,A> = <tPA,PA> + 2Re<tPA,QA> + <tQA,QA>, and <tPA,PA> >= 0
+  [PASS] trial 2: <tA,A> = <tPA,PA> + 2Re<tPA,QA> + <tQA,QA>, and <tPA,PA> >= 0
+  [PASS] trial 3: <tA,A> = <tPA,PA> + 2Re<tPA,QA> + <tQA,QA>, and <tPA,PA> >= 0
+  [PASS] trial 4: <tA,A> = <tPA,PA> + 2Re<tPA,QA> + <tQA,QA>, and <tPA,PA> >= 0
+
+Question 5.3
+------------
+  [NOTE] Question 5.3 (Q-structure and reflection positivity) is open; no computation applies
+
+Proposition 5.4  constraints on Q-symmetric encodings
+-----------------------------------------------------
+  [PASS] n=2: (1) symmetrising a random H under J kills exactly the odd-weight terms
+  [PASS] n=3: (1) symmetrising a random H under J kills exactly the odd-weight terms
+  [PASS] n=4: (1) symmetrising a random H under J kills exactly the odd-weight terms
+  [PASS] n=3: (2) ground level degenerate; gap measured to the next distinct level is > 0
+  [PASS] n=5: (2) ground level degenerate; gap measured to the next distinct level is > 0
+  [PASS] (3) n even: unique ground level possible (random H, n=4) and degenerate possible (-Z1Z2, n=2)
+
+Conjecture 5.5
+--------------
+  [NOTE] Conjecture 5.5 (parity independence of the continuum gap) is open; no computation applies
+
+Proposition 5.6  J-compatible isometric embeddings exist iff n' - n is even
+---------------------------------------------------------------------------
+  [PASS] n=1: real-linear maps with iota J_1 = J_2 iota: only 0
+  [PASS] n=1: maps intertwining J_1 and J_3: nonzero space
+  [PASS] n=2: real-linear maps with iota J_2 = J_3 iota: only 0
+  [PASS] n=2: maps intertwining J_2 and J_4: nonzero space
+  [PASS] n=3: real-linear maps with iota J_3 = J_4 iota: only 0
+  [PASS] n=3: maps intertwining J_3 and J_5: nonzero space
+  [PASS] phi = (|01>+|10>)/sqrt2 satisfies J_2 phi = phi
+  [PASS] n=1 -> n'=3: iota(x) = x (x) phi^(x)1 is an isometry with iota J_n = J_n' iota
+  [PASS] n=2 -> n'=4: iota(x) = x (x) phi^(x)1 is an isometry with iota J_n = J_n' iota
+  [PASS] n=1 -> n'=5: iota(x) = x (x) phi^(x)2 is an isometry with iota J_n = J_n' iota
+  [PASS] n=3 -> n'=7: iota(x) = x (x) phi^(x)2 is an isometry with iota J_n = J_n' iota
+  [PASS] Remark: if iota* theta_(n+2) iota = theta_n then <theta x, x> is the same at both stages
+
+Conjecture 5.7
+--------------
+  [NOTE] Conjecture 5.7 (inductive Q-regularisation of Yang-Mills) is open; no computation applies
+
+Section 5: 25/25 checks passed

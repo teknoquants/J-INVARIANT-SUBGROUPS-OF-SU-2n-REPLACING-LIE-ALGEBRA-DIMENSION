@@ -1,0 +1,63 @@
+
+Thm 1.2  J_n^2 = (-1)^n I  -- correct
+-------------------------------------
+  [PASS] J_n^2 = (-1)^n I, n = 1..7
+  [PASS] 'involution' wording: J_n^2 = -I for odd n, so J_n is not an involution there
+
+Lemma 1.4  odd-weight criterion -- correct only 'for all theta'
+---------------------------------------------------------------
+  [PASS] generic theta: exp(-i theta P/2) is J-fixed iff w(P) odd (all Pauli strings, n=2,3)
+  [PASS] but at theta = 2 pi an even-weight rotation (= -I) is J-fixed: the lemma needs 'for all theta'
+
+Lemma 2.1  dim k_n = (4^n - (-2)^n)/2 -- correct
+------------------------------------------------
+  [PASS] odd-weight count = formula = dim sp/so, n = 1..10
+
+Lemma 2.2  degree 6 -- result correct, proof mixes two Jordan-Wigner conventions
+--------------------------------------------------------------------------------
+  [PASS] Z-on-site JW: Z1Z2Z3 = i g1...g6
+  [PASS] Z-on-site JW: Z_j = -i g_(2j-1) g_(2j)
+  [PASS] Z-on-site JW: X_2 is NOT i g3 g4 (proof's first line); it is a degree-3 monomial  -- ((1, 2, 3), (-0-1j))
+  [PASS] X-on-site JW (where X_j is quadratic): Z2Z3Z4 has degree 5, not 6  -- ((1, 2, 3, 6, 7), -1)
+
+Thm 3.2  'sufficient but not necessary' -- unproved; counterexample invalid
+---------------------------------------------------------------------------
+  [PASS] a non-abelian block does not leave |0...0> in place: P(0...0) < 1 for random angles, so Pr(x) = ... * delta_(x_exp,0) is false  -- max P(00) = 0.936
+  [NOTE] displayed relation uses the divisibility sign '∤' and the direction 'poly dim ⇏ intractable'; non-necessity is 'C_sample ∈ Poly ⇏ dim ≤ Poly'
+
+Lemma 3.3  'adjoint action preserves degree 6' -- false
+-------------------------------------------------------
+  [PASS] [deg-6, deg-6] sharing one Majorana is a NONZERO monomial of degree 10  -- (1, 2, 3, 4, 5, 7, 8, 9, 10, 11)
+  [NOTE] dim of the state space is 2^n (as in the statement), but the proof writes O(n^(2n)); the operator space is 4^n
+
+Thm 3.5  disconnected commutation graph does not give a tensor factorization
+----------------------------------------------------------------------------
+  [PASS] XX and ZZ commute (two components, no edge) yet act on the same qubits
+  [PASS] output distribution does not factor over qubits (P != P1 x P2)  -- [0.585 0.    0.    0.415]
+  [NOTE] with disjoint supports of size <= c log n the DLA is <= m * 4^(c log n) = poly: dim g cannot -> infinity superpolynomially, so the 'independent of dim g' clause is vacuous
+
+Thm 4.3  beta-invariance of delta* = k -- false as stated (same as earlier paper)
+---------------------------------------------------------------------------------
+    N=10: real dims of GOE vs GUE microstate spaces: 55 vs 100
+    N=100: real dims of GOE vs GUE microstate spaces: 5050 vs 10000
+    N=1000: real dims of GOE vs GUE microstate spaces: 500500 vs 1000000
+  [NOTE] GOE and GUE microstate spaces have different real dimension, so their log-volumes differ at order N^2 log N, not O(1/N)
+
+Thm 5.2  reflection positivity obstruction -- contradicts its own hypothesis
+----------------------------------------------------------------------------
+  [PASS] truncated vector is a vector of the full space, so <theta P A, P A> >= 0 whenever RP holds
+  [PASS] the identity <theta PA,PA> = <theta A,A> - R_tail omits cross terms (fails for generic theta)  -- 408.90 vs 219.51
+
+Lemma 5.3  parity of n and the ground state
+-------------------------------------------
+  [PASS] Z1Z2 commutes with J_2 (even weight)
+  [PASS] J_n^2 = +I does NOT force a unique ground state: -Z1Z2 has a 2-fold degenerate ground level  -- [-1. -1.  1.  1.]
+  [PASS] J_n^2 = -I (n=3): a random J-symmetric H has all levels in Kramers pairs (correct part of the lemma)
+
+Thm 5.4  no isometry can intertwine J_n and J_(n+1)
+---------------------------------------------------
+  [PASS] n=1: maps intertwining J_1 and J_2 = 0 only; J_1 and J_3: 16-dim space
+  [PASS] n=2: maps intertwining J_2 and J_3 = 0 only; J_2 and J_4: 64-dim space
+  [PASS] n=3: maps intertwining J_3 and J_4 = 0 only; J_3 and J_5: 256-dim space
+
+Assessment checks: 21/21 checks passed

@@ -1,0 +1,366 @@
+
+Theorem 1.2  J_n antiunitary, J_n^2 = (-1)^n I
+----------------------------------------------
+  [PASS] n=1: J_n^2 = -1 I
+  [PASS] n=2: J_n^2 = +1 I
+  [PASS] n=3: J_n^2 = -1 I
+  [PASS] n=4: J_n^2 = +1 I
+  [PASS] n=5: J_n^2 = -1 I
+  [PASS] n=6: J_n^2 = +1 I
+  [PASS] n=7: J_n^2 = -1 I
+  [PASS] n=1: J_n is antilinear and <J x, J y> = <y, x> (antiunitary)
+  [PASS] n=2: J_n is antilinear and <J x, J y> = <y, x> (antiunitary)
+  [PASS] n=3: J_n is antilinear and <J x, J y> = <y, x> (antiunitary)
+  [PASS] S_n K S_n K = S_n conj(S_n) = (-1)^n S_n^2 (proof step), n = 1..5
+  [PASS] J_n is an involution only for even n
+
+Definition 1.3  K_n is a group; k_n is its Lie algebra
+------------------------------------------------------
+  [PASS] products and inverses of J-fixed unitaries are J-fixed (closure of K_3)
+  [PASS] exp of an element of k_3 lies in K_3
+
+Lemma 1.4  odd-weight criterion (for all theta)
+-----------------------------------------------
+  [PASS] n=1: J P J^-1 = (-1)^w(P) P for all 3 Pauli strings
+  [PASS] n=2: J P J^-1 = (-1)^w(P) P for all 15 Pauli strings
+  [PASS] n=3: J P J^-1 = (-1)^w(P) P for all 63 Pauli strings
+  [PASS] n=2: rotation is J-fixed for all sampled theta  <=>  w(P) odd
+  [PASS] n=3: rotation is J-fixed for all sampled theta  <=>  w(P) odd
+  [PASS] qualifier needed: at theta = 2 pi an even-weight rotation equals -I and is J-fixed
+  [PASS] derivative at theta = 0: J(-iP/2)J^-1 = -(-1)^w (-iP/2), so equality needs w odd
+  [PASS] one-qubit identity sigma_y conj(sigma_a) sigma_y = -sigma_a, a = x, y, z; and = +I for I
+
+Corollary 1.5  J-symmetric Hamiltonians are even weight; k_n = span{iP : w odd}
+-------------------------------------------------------------------------------
+  [PASS] n=2: Pauli P commutes with J_n  <=>  w(P) even
+  [PASS] n=2: random even-weight H commutes with J; adding one odd term breaks it
+  [PASS] n=2: dim of J-fixed part of su(2^n) = number of odd-weight strings = 6
+  [PASS] n=3: Pauli P commutes with J_n  <=>  w(P) even
+  [PASS] n=3: random even-weight H commutes with J; adding one odd term breaks it
+  [PASS] n=3: dim of J-fixed part of su(2^n) = number of odd-weight strings = 36
+
+Corollary 1.6  Kramers degeneracy (odd n); nothing forced for even n
+--------------------------------------------------------------------
+  [PASS] n=1: every level of a random J-symmetric H is paired; J v is an eigenvector orthogonal to v
+  [PASS] n=3: every level of a random J-symmetric H is paired; J v is an eigenvector orthogonal to v
+  [PASS] n=5: every level of a random J-symmetric H is paired; J v is an eigenvector orthogonal to v
+  [PASS] n=4: generic J-symmetric H has a simple spectrum (no forced degeneracy)
+  [PASS] n=2: -Z1Z2 is J-symmetric with a doubly degenerate ground level (no forced uniqueness)
+  [PASS] Exercise 10, second part: for odd n, E_1 - E_0 = 0, so the gap is E_next - E_0 > 0
+
+Section 1: 34/34 checks passed
+
+
+Lemma 2.1  dim k_n = (4^n - (-2)^n)/2 and sp/so type (Exercise 3)
+-----------------------------------------------------------------
+  [PASS] n=1: odd-weight count = (4^n-(-2)^n)/2 = dim sp(1) = 3
+  [PASS] n=2: odd-weight count = (4^n-(-2)^n)/2 = dim so(4) = 6
+  [PASS] n=3: odd-weight count = (4^n-(-2)^n)/2 = dim sp(4) = 36
+  [PASS] n=4: odd-weight count = (4^n-(-2)^n)/2 = dim so(16) = 120
+  [PASS] n=5: odd-weight count = (4^n-(-2)^n)/2 = dim sp(16) = 528
+  [PASS] n=6: odd-weight count = (4^n-(-2)^n)/2 = dim so(64) = 2016
+  [PASS] n=7: odd-weight count = (4^n-(-2)^n)/2 = dim sp(64) = 8256
+  [PASS] n=8: odd-weight count = (4^n-(-2)^n)/2 = dim so(256) = 32640
+  [PASS] n=9: odd-weight count = (4^n-(-2)^n)/2 = dim sp(256) = 131328
+  [PASS] n=10: odd-weight count = (4^n-(-2)^n)/2 = dim so(1024) = 523776
+  [PASS] binomial step: (1+3)^n - (1-3)^n = 2 * sum_odd C(n,w) 3^w, n = 1..12
+  [PASS] table in the Solution of Exercise 3 (n = 1..5: 3, 6, 36, 120, 528)
+  [PASS] n=1: span of odd-weight iP is closed under brackets (it is a Lie algebra)
+  [PASS] n=2: span of odd-weight iP is closed under brackets (it is a Lie algebra)
+  [PASS] n=3: span of odd-weight iP is closed under brackets (it is a Lie algebra)
+  [PASS] n=4: span of odd-weight iP is closed under brackets (it is a Lie algebra)
+  [PASS] n=5: span of odd-weight iP is closed under brackets (it is a Lie algebra)
+  [PASS] n=1: K_n preserves the bilinear form S = sigma_y^(x)n, which is symplectic (S antisymmetric)
+  [PASS] n=2: K_n preserves the bilinear form S = sigma_y^(x)n, which is orthogonal (S symmetric)
+  [PASS] n=3: K_n preserves the bilinear form S = sigma_y^(x)n, which is symplectic (S antisymmetric)
+  [PASS] n=4: K_n preserves the bilinear form S = sigma_y^(x)n, which is orthogonal (S symmetric)
+  [PASS] n=5: K_n preserves the bilinear form S = sigma_y^(x)n, which is symplectic (S antisymmetric)
+
+Lemma 2.2  Majorana degrees (Z-on-site convention)
+--------------------------------------------------
+  [PASS] n=3: {g_r, g_s} = 2 delta_rs I
+  [PASS] n=4: {g_r, g_s} = 2 delta_rs I
+  [PASS] n=5: {g_r, g_s} = 2 delta_rs I
+  [PASS] (1) Z_j = -i g_(2j-1) g_(2j) for all j (n=6)
+  [PASS] (1) proof step: g_(2j-1) g_(2j) = X_j Y_j = i Z_j
+  [PASS] (2) Z_j Z_(j+1) Z_(j+2) = i g_(2j-1) ... g_(2j+4) for all j (n=6)
+  [PASS] (3) X_j = (prod_(k<j) Z_k) g_(2j-1), a monomial of degree 2j-1 (n=6)
+  [PASS] (4) X-on-site convention: Z2Z3Z4 = -g1 g2 g3 g6 g7 (degree 5)  -- ((1, 2, 3, 6, 7), -1)
+  [PASS] (4) in the X-on-site convention X_j is quadratic
+
+Proposition 2.3  ZZZ circuits (Exercise 7, five parts)
+------------------------------------------------------
+  [PASS] n=3: (1) all generators odd weight; (2) DLA abelian of dimension n-2 = 1
+  [PASS] n=4: (1) all generators odd weight; (2) DLA abelian of dimension n-2 = 2
+  [PASS] n=5: (1) all generators odd weight; (2) DLA abelian of dimension n-2 = 3
+  [PASS] n=6: (1) all generators odd weight; (2) DLA abelian of dimension n-2 = 4
+  [PASS] n=7: (1) all generators odd weight; (2) DLA abelian of dimension n-2 = 5
+  [PASS] n=8: (1) all generators odd weight; (2) DLA abelian of dimension n-2 = 6
+  [PASS] (1) the rotations are J-fixed for random theta (n=5)
+  [PASS] (3) every circuit maps |0...0> to exp(-i sum theta/2)|0...0>: output 0...0 with probability 1
+  [PASS] (4) Z1Z2Z3 is not in the real span of the quadratic monomials (least-squares residual > 0)  -- residual 5.657
+  [NOTE] (5) a ℚ-structured family that is efficiently sampleable (part 3) but not quadratic (part 4) refutes 'free fermions are the only tractable case'
+
+Section 2: 40/40 checks passed
+
+
+Theorem 3.2 (known results, demonstrated)
+-----------------------------------------
+  [PASS] (1) matchgates: 25-gate circuit, 8x8 covariance propagation = 16-dim statevector
+  [PASS] (2) g-sim style: <O> from Heisenberg evolution inside g (dim 66) matches statevector  -- 0.078500
+  [NOTE] Theorem 3.2 cites [3]-[6]; the checks above demonstrate the two mechanisms on small instances
+
+Statement 3.3  (Problem 3 as posed)
+-----------------------------------
+  [NOTE] Statement 3.3 is the question itself; it is answered by Theorems 3.7, 3.9 and 3.11 below
+
+Lemma 3.4  degree rule for Majorana monomials
+---------------------------------------------
+  [PASS] 300 random pairs: g_A g_B = (-1)^(pq-s) g_B g_A and g_A g_B = ± g_(AΔB) (degree p+q-2s)
+  [PASS] Corollary: two degree-6 monomials sharing one index have bracket ±2 g of degree 10
+  [PASS] Corollary: quadratic monomials close under brackets (span dimension n(2n-1) unchanged)
+
+Proposition 3.5  |x><x| = 2^-n sum_S (-1)^(x.S) Z_S, all even degrees
+---------------------------------------------------------------------
+  [PASS] x = (0, 0, 0, 0): projector equals the 2^n-term Z_S expansion
+  [PASS] x = (1, 0, 1, 1): projector equals the 2^n-term Z_S expansion
+  [PASS] x = (1, 1, 1, 1): projector equals the 2^n-term Z_S expansion
+  [PASS] Z_S = (-i)^|S| prod_(j in S) g_(2j-1) g_(2j): degree 2|S|, all degrees 0..2n occur
+
+Theorem 3.6  block factorisation for disjoint supports
+------------------------------------------------------
+  [PASS] (1) U = tensor product of block unitaries
+  [PASS] (1) output distribution = product of block distributions
+  [PASS] (2) dim g = sum of block dimensions <= sum 4^|S_k|  -- 15
+  [PASS] Remark: XX and ZZ commute but their output does not factorise over qubits  -- [0.585 0.    0.    0.415]
+
+Theorem 3.7  exponential DLA, exact O(L) sampling (necessity fails)
+-------------------------------------------------------------------
+  [PASS] n=3: (1) 3 odd-weight generators; (2) dim g = 3*2^(n-2) = 6
+  [PASS] n=4: (1) 4 odd-weight generators; (2) dim g = 3*2^(n-2) = 12
+  [PASS] n=5: (1) 5 odd-weight generators; (2) dim g = 3*2^(n-2) = 24
+  [PASS] n=6: (1) 6 odd-weight generators; (2) dim g = 3*2^(n-2) = 48
+  [PASS] n=7: (1) 7 odd-weight generators; (2) dim g = 3*2^(n-2) = 96
+  [PASS] n=8: (1) 8 odd-weight generators; (2) dim g = 3*2^(n-2) = 192
+  [PASS] n=9: (1) 9 odd-weight generators; (2) dim g = 3*2^(n-2) = 384
+  [PASS] n=10: (1) 10 odd-weight generators; (2) dim g = 3*2^(n-2) = 768
+  [PASS] n=11: (1) 11 odd-weight generators; (2) dim g = 3*2^(n-2) = 1536
+  [PASS] n=12: (1) 12 odd-weight generators; (2) dim g = 3*2^(n-2) = 3072
+  [PASS] (2) every DLA element is Z^s (x) sigma_target with s of even weight (n=8)
+  [PASS] (2) structure: control patterns form a group E of size 2^(n-2) (so g ≅ su(2)^(⊕ 2^(n-2)))
+  [PASS] (3) 20 random 60-gate circuits: U|0..0> = |0..0>_controls (x) V|0>_target exactly (n=6)
+  [PASS] (1) the generators' rotations are J-fixed (n=4)
+
+Lemma 3.8  parity padding
+-------------------------
+  [PASS] (1) 40 random sets: every padded generator has odd weight
+  [PASS] (2) padded circuit reproduces the original distribution; ancilla always 0
+  [PASS] (3) dim g(G) <= dim g(G') <= 2 dim g(G)
+
+Theorem 3.9  padded IQP: abelian DLA n(n+1)/2, identical output
+---------------------------------------------------------------
+  [PASS] n=3: (1) odd weights, commuting, abelian DLA of dim n(n+1)/2 = 6
+  [PASS] n=3: (2) padded circuit = Ising IQP distribution, ancilla = 0
+  [PASS] n=3: (2) <0|C|0> = Z(e^(i pi/8))/2^n, the Ising partition function of [13]
+  [PASS] n=4: (1) odd weights, commuting, abelian DLA of dim n(n+1)/2 = 10
+  [PASS] n=4: (2) padded circuit = Ising IQP distribution, ancilla = 0
+  [PASS] n=4: (2) <0|C|0> = Z(e^(i pi/8))/2^n, the Ising partition function of [13]
+  [PASS] n=5: (1) odd weights, commuting, abelian DLA of dim n(n+1)/2 = 15
+  [PASS] n=5: (2) padded circuit = Ising IQP distribution, ancilla = 0
+  [PASS] n=5: (2) <0|C|0> = Z(e^(i pi/8))/2^n, the Ising partition function of [13]
+  [PASS] (2) every 2-qubit gate diagonal in the X basis = e^(i a) exp(i(b X_j + c X_k + d X_jX_k)) (20 random)
+  [NOTE] (3)-(4) hardness: Theorem 2 / Corollary 1 of [12] and Theorem 1 of [13] (Conjecture 2); cited, not computable
+
+Corollary 3.10  conjugate DLAs, opposite sampling behaviour
+-----------------------------------------------------------
+  [PASS] both sets abelian with equal DLA dimension
+  [PASS] H^(x)n (on the first n qubits) conjugates every X-type generator to its Z-type partner
+  [PASS] Z-type circuits output 0...0 with probability 1
+
+Theorem 3.11  answer to Problem 3
+---------------------------------
+  [NOTE] part 1 = Theorem 3.7 (checked above, unconditional); part 2 = Theorem 3.9 (output equality checked above; hardness cited from [12], [13])
+
+Theorem 3.12  code criterion
+----------------------------
+  [PASS] trial 0: dim g = 240, yet the state stays in span{|c>: c in C} with |C| = 4
+  [PASS] trial 1: dim g = 240, yet the state stays in span{|c>: c in C} with |C| = 4
+  [PASS] trial 2: dim g = 240, yet the state stays in span{|c>: c in C} with |C| = 4
+  [PASS] trial 3: dim g = 120, yet the state stays in span{|c>: c in C} with |C| = 4
+  [PASS] trial 4: dim g = 120, yet the state stays in span{|c>: c in C} with |C| = 4
+  [PASS] Theorem 3.7 is the case C = span{e_target}: X-parts of its generators all equal e_target
+
+Question 3.13  data for the module generated by rho_0
+-----------------------------------------------------
+  [PASS] n=3: table row values: Theorem 3.7 = 4, ZZZ = 1, odd X-program = 33, product = 3^n = 27  -- 4, 1, 33, 27
+  [PASS] n=4: table row values: Theorem 3.7 = 4, ZZZ = 1, odd X-program = 129, product = 3^n = 81  -- 4, 1, 129, 81
+  [PASS] n=5: table row values: Theorem 3.7 = 4, ZZZ = 1, odd X-program = 513, product = 3^n = 243  -- 4, 1, 513, 243
+  [NOTE] Question 3.13 itself is open; these numbers are the evidence table in Section 3.2
+
+Section 3: 52/52 checks passed
+
+
+Theorem 4.2  algebraic consistency of r -> 1 + (r-1)/t^2 (cited: Dykema, Radulescu)
+-----------------------------------------------------------------------------------
+  [PASS] (L(F_r)_s)_t = L(F_r)_(st) (group action), 2000 exact rational cases
+  [PASS] f_(1/t) inverts f_t
+  [PASS] parameter stays > 1
+  [PASS] t = 1/k reproduces Voiculescu's L(F_n)_(1/k) = L(F_(1+k^2(n-1)))
+  [NOTE] Theorem 4.2 itself is a cited theorem about infinite-dimensional algebras and is not computable
+
+Proposition 4.3  M_2(L(F_k)) = L(F_((k+3)/4)); same complexification (Exercise 6)
+---------------------------------------------------------------------------------
+  [PASS] 1 + (k-1)/2^2 = (k+3)/4 exactly, k = 2..1000
+  [PASS] same identity for 1000 random rational k > 1
+  [PASS] k = 5 gives L(F_2)
+  [PASS] H (x)_R C = M_2(C): phi is multiplicative and its C-span is all of M_2(C)
+  [PASS] finite model A = R[S_3]: (A (x)_R H) (x)_R C has the same C-span as M_2(A (x)_R C)
+
+Remark 4.4  complexification does not reflect isomorphism
+---------------------------------------------------------
+  [PASS] every nonzero quaternion is invertible: det phi(q) = |q|^2 > 0 (H is a division algebra)
+  [PASS] M_2(R) has a nonzero nilpotent, so M_2(R) is not isomorphic to H
+  [PASS] both complexify to M_2(C)
+  [NOTE] whether L_H(F_5) and L_R(F_2) are isomorphic is open (Problem 2) and is not tested
+
+Conjecture 4.5  d_beta(N) and why the draft 'Theorem 4.3' is withdrawn
+----------------------------------------------------------------------
+  [PASS] d_beta(N) = N + beta N(N-1)/2 from explicit bases, beta = 1, 2, 4, N = 1..5
+  [PASS] log-volumes in spaces of different dimension differ at order N^2 log N (not O(1/N))
+  [PASS] (S1,S2,S1) counterexample: moment errors <= eps force tr((Y1-Y3)^2) <= 4 eps
+  [PASS] beta=1: independent ensembles are asymptotically free (tr A^2 ~ 1, tr A^2B^2 ~ 1, tr ABAB ~ 0)
+  [PASS] beta=2: independent ensembles are asymptotically free (tr A^2 ~ 1, tr A^2B^2 ~ 1, tr ABAB ~ 0)
+  [PASS] beta=4: independent ensembles are asymptotically free (tr A^2 ~ 1, tr A^2B^2 ~ 1, tr ABAB ~ 0)
+  [NOTE] Conjecture 4.5 itself is open and is not tested
+
+Question 4.6
+------------
+  [NOTE] Question 4.6 is open; no computation applies
+
+Section 4: 18/18 checks passed
+
+
+Definition 5.1  truncation projection and encoding isometry
+-----------------------------------------------------------
+  [PASS] P_jmax is an orthogonal projection (P^2 = P = P^dag)
+  [PASS] an isometry V: P H -> (C^2)^(x)3 exists when dim P H = 6 <= 2^n = 8
+
+Proposition 5.2  truncation preserves positivity
+------------------------------------------------
+  [PASS] trial 0: <tA,A> = <tPA,PA> + 2Re<tPA,QA> + <tQA,QA>, and <tPA,PA> >= 0
+  [PASS] trial 1: <tA,A> = <tPA,PA> + 2Re<tPA,QA> + <tQA,QA>, and <tPA,PA> >= 0
+  [PASS] trial 2: <tA,A> = <tPA,PA> + 2Re<tPA,QA> + <tQA,QA>, and <tPA,PA> >= 0
+  [PASS] trial 3: <tA,A> = <tPA,PA> + 2Re<tPA,QA> + <tQA,QA>, and <tPA,PA> >= 0
+  [PASS] trial 4: <tA,A> = <tPA,PA> + 2Re<tPA,QA> + <tQA,QA>, and <tPA,PA> >= 0
+
+Question 5.3
+------------
+  [NOTE] Question 5.3 (Q-structure and reflection positivity) is open; no computation applies
+
+Proposition 5.4  constraints on Q-symmetric encodings
+-----------------------------------------------------
+  [PASS] n=2: (1) symmetrising a random H under J kills exactly the odd-weight terms
+  [PASS] n=3: (1) symmetrising a random H under J kills exactly the odd-weight terms
+  [PASS] n=4: (1) symmetrising a random H under J kills exactly the odd-weight terms
+  [PASS] n=3: (2) ground level degenerate; gap measured to the next distinct level is > 0
+  [PASS] n=5: (2) ground level degenerate; gap measured to the next distinct level is > 0
+  [PASS] (3) n even: unique ground level possible (random H, n=4) and degenerate possible (-Z1Z2, n=2)
+
+Conjecture 5.5
+--------------
+  [NOTE] Conjecture 5.5 (parity independence of the continuum gap) is open; no computation applies
+
+Proposition 5.6  J-compatible isometric embeddings exist iff n' - n is even
+---------------------------------------------------------------------------
+  [PASS] n=1: real-linear maps with iota J_1 = J_2 iota: only 0
+  [PASS] n=1: maps intertwining J_1 and J_3: nonzero space
+  [PASS] n=2: real-linear maps with iota J_2 = J_3 iota: only 0
+  [PASS] n=2: maps intertwining J_2 and J_4: nonzero space
+  [PASS] n=3: real-linear maps with iota J_3 = J_4 iota: only 0
+  [PASS] n=3: maps intertwining J_3 and J_5: nonzero space
+  [PASS] phi = (|01>+|10>)/sqrt2 satisfies J_2 phi = phi
+  [PASS] n=1 -> n'=3: iota(x) = x (x) phi^(x)1 is an isometry with iota J_n = J_n' iota
+  [PASS] n=2 -> n'=4: iota(x) = x (x) phi^(x)1 is an isometry with iota J_n = J_n' iota
+  [PASS] n=1 -> n'=5: iota(x) = x (x) phi^(x)2 is an isometry with iota J_n = J_n' iota
+  [PASS] n=3 -> n'=7: iota(x) = x (x) phi^(x)2 is an isometry with iota J_n = J_n' iota
+  [PASS] Remark: if iota* theta_(n+2) iota = theta_n then <theta x, x> is the same at both stages
+
+Conjecture 5.7
+--------------
+  [NOTE] Conjecture 5.7 (inductive Q-regularisation of Yang-Mills) is open; no computation applies
+
+Section 5: 25/25 checks passed
+
+
+Thm 1.2  J_n^2 = (-1)^n I  -- correct
+-------------------------------------
+  [PASS] J_n^2 = (-1)^n I, n = 1..7
+  [PASS] 'involution' wording: J_n^2 = -I for odd n, so J_n is not an involution there
+
+Lemma 1.4  odd-weight criterion -- correct only 'for all theta'
+---------------------------------------------------------------
+  [PASS] generic theta: exp(-i theta P/2) is J-fixed iff w(P) odd (all Pauli strings, n=2,3)
+  [PASS] but at theta = 2 pi an even-weight rotation (= -I) is J-fixed: the lemma needs 'for all theta'
+
+Lemma 2.1  dim k_n = (4^n - (-2)^n)/2 -- correct
+------------------------------------------------
+  [PASS] odd-weight count = formula = dim sp/so, n = 1..10
+
+Lemma 2.2  degree 6 -- result correct, proof mixes two Jordan-Wigner conventions
+--------------------------------------------------------------------------------
+  [PASS] Z-on-site JW: Z1Z2Z3 = i g1...g6
+  [PASS] Z-on-site JW: Z_j = -i g_(2j-1) g_(2j)
+  [PASS] Z-on-site JW: X_2 is NOT i g3 g4 (proof's first line); it is a degree-3 monomial  -- ((1, 2, 3), (-0-1j))
+  [PASS] X-on-site JW (where X_j is quadratic): Z2Z3Z4 has degree 5, not 6  -- ((1, 2, 3, 6, 7), -1)
+
+Thm 3.2  'sufficient but not necessary' -- unproved; counterexample invalid
+---------------------------------------------------------------------------
+  [PASS] a non-abelian block does not leave |0...0> in place: P(0...0) < 1 for random angles, so Pr(x) = ... * delta_(x_exp,0) is false  -- max P(00) = 0.936
+  [NOTE] displayed relation uses the divisibility sign '∤' and the direction 'poly dim ⇏ intractable'; non-necessity is 'C_sample ∈ Poly ⇏ dim ≤ Poly'
+
+Lemma 3.3  'adjoint action preserves degree 6' -- false
+-------------------------------------------------------
+  [PASS] [deg-6, deg-6] sharing one Majorana is a NONZERO monomial of degree 10  -- (1, 2, 3, 4, 5, 7, 8, 9, 10, 11)
+  [NOTE] dim of the state space is 2^n (as in the statement), but the proof writes O(n^(2n)); the operator space is 4^n
+
+Thm 3.5  disconnected commutation graph does not give a tensor factorization
+----------------------------------------------------------------------------
+  [PASS] XX and ZZ commute (two components, no edge) yet act on the same qubits
+  [PASS] output distribution does not factor over qubits (P != P1 x P2)  -- [0.585 0.    0.    0.415]
+  [NOTE] with disjoint supports of size <= c log n the DLA is <= m * 4^(c log n) = poly: dim g cannot -> infinity superpolynomially, so the 'independent of dim g' clause is vacuous
+
+Thm 4.3  beta-invariance of delta* = k -- false as stated (same as earlier paper)
+---------------------------------------------------------------------------------
+    N=10: real dims of GOE vs GUE microstate spaces: 55 vs 100
+    N=100: real dims of GOE vs GUE microstate spaces: 5050 vs 10000
+    N=1000: real dims of GOE vs GUE microstate spaces: 500500 vs 1000000
+  [NOTE] GOE and GUE microstate spaces have different real dimension, so their log-volumes differ at order N^2 log N, not O(1/N)
+
+Thm 5.2  reflection positivity obstruction -- contradicts its own hypothesis
+----------------------------------------------------------------------------
+  [PASS] truncated vector is a vector of the full space, so <theta P A, P A> >= 0 whenever RP holds
+  [PASS] the identity <theta PA,PA> = <theta A,A> - R_tail omits cross terms (fails for generic theta)  -- 408.90 vs 219.51
+
+Lemma 5.3  parity of n and the ground state
+-------------------------------------------
+  [PASS] Z1Z2 commutes with J_2 (even weight)
+  [PASS] J_n^2 = +I does NOT force a unique ground state: -Z1Z2 has a 2-fold degenerate ground level  -- [-1. -1.  1.  1.]
+  [PASS] J_n^2 = -I (n=3): a random J-symmetric H has all levels in Kramers pairs (correct part of the lemma)
+
+Thm 5.4  no isometry can intertwine J_n and J_(n+1)
+---------------------------------------------------
+  [PASS] n=1: maps intertwining J_1 and J_2 = 0 only; J_1 and J_3: 16-dim space
+  [PASS] n=2: maps intertwining J_2 and J_3 = 0 only; J_2 and J_4: 64-dim space
+  [PASS] n=3: maps intertwining J_3 and J_4 = 0 only; J_3 and J_5: 256-dim space
+
+Assessment checks: 21/21 checks passed
+
+==============================================================================
+SUMMARY
+==============================================================================
+PASS  Section 1  Antiunitary framework           34/34 checks passed           0.4s
+PASS  Section 2  Dimension and fermionic degree  40/40 checks passed           0.4s
+PASS  Section 3  Simulability and Problem 3      52/52 checks passed          20.6s
+PASS  Section 4  Free group factors              18/18 checks passed           0.4s
+PASS  Section 5  Truncation and embeddings       25/25 checks passed           0.4s
+PASS  Appendix A Errata of the earlier draft     21/21 checks passed           3.1s

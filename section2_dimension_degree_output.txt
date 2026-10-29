@@ -1,0 +1,52 @@
+
+Lemma 2.1  dim k_n = (4^n - (-2)^n)/2 and sp/so type (Exercise 3)
+-----------------------------------------------------------------
+  [PASS] n=1: odd-weight count = (4^n-(-2)^n)/2 = dim sp(1) = 3
+  [PASS] n=2: odd-weight count = (4^n-(-2)^n)/2 = dim so(4) = 6
+  [PASS] n=3: odd-weight count = (4^n-(-2)^n)/2 = dim sp(4) = 36
+  [PASS] n=4: odd-weight count = (4^n-(-2)^n)/2 = dim so(16) = 120
+  [PASS] n=5: odd-weight count = (4^n-(-2)^n)/2 = dim sp(16) = 528
+  [PASS] n=6: odd-weight count = (4^n-(-2)^n)/2 = dim so(64) = 2016
+  [PASS] n=7: odd-weight count = (4^n-(-2)^n)/2 = dim sp(64) = 8256
+  [PASS] n=8: odd-weight count = (4^n-(-2)^n)/2 = dim so(256) = 32640
+  [PASS] n=9: odd-weight count = (4^n-(-2)^n)/2 = dim sp(256) = 131328
+  [PASS] n=10: odd-weight count = (4^n-(-2)^n)/2 = dim so(1024) = 523776
+  [PASS] binomial step: (1+3)^n - (1-3)^n = 2 * sum_odd C(n,w) 3^w, n = 1..12
+  [PASS] table in the Solution of Exercise 3 (n = 1..5: 3, 6, 36, 120, 528)
+  [PASS] n=1: span of odd-weight iP is closed under brackets (it is a Lie algebra)
+  [PASS] n=2: span of odd-weight iP is closed under brackets (it is a Lie algebra)
+  [PASS] n=3: span of odd-weight iP is closed under brackets (it is a Lie algebra)
+  [PASS] n=4: span of odd-weight iP is closed under brackets (it is a Lie algebra)
+  [PASS] n=5: span of odd-weight iP is closed under brackets (it is a Lie algebra)
+  [PASS] n=1: K_n preserves the bilinear form S = sigma_y^(x)n, which is symplectic (S antisymmetric)
+  [PASS] n=2: K_n preserves the bilinear form S = sigma_y^(x)n, which is orthogonal (S symmetric)
+  [PASS] n=3: K_n preserves the bilinear form S = sigma_y^(x)n, which is symplectic (S antisymmetric)
+  [PASS] n=4: K_n preserves the bilinear form S = sigma_y^(x)n, which is orthogonal (S symmetric)
+  [PASS] n=5: K_n preserves the bilinear form S = sigma_y^(x)n, which is symplectic (S antisymmetric)
+
+Lemma 2.2  Majorana degrees (Z-on-site convention)
+--------------------------------------------------
+  [PASS] n=3: {g_r, g_s} = 2 delta_rs I
+  [PASS] n=4: {g_r, g_s} = 2 delta_rs I
+  [PASS] n=5: {g_r, g_s} = 2 delta_rs I
+  [PASS] (1) Z_j = -i g_(2j-1) g_(2j) for all j (n=6)
+  [PASS] (1) proof step: g_(2j-1) g_(2j) = X_j Y_j = i Z_j
+  [PASS] (2) Z_j Z_(j+1) Z_(j+2) = i g_(2j-1) ... g_(2j+4) for all j (n=6)
+  [PASS] (3) X_j = (prod_(k<j) Z_k) g_(2j-1), a monomial of degree 2j-1 (n=6)
+  [PASS] (4) X-on-site convention: Z2Z3Z4 = -g1 g2 g3 g6 g7 (degree 5)  -- ((1, 2, 3, 6, 7), -1)
+  [PASS] (4) in the X-on-site convention X_j is quadratic
+
+Proposition 2.3  ZZZ circuits (Exercise 7, five parts)
+------------------------------------------------------
+  [PASS] n=3: (1) all generators odd weight; (2) DLA abelian of dimension n-2 = 1
+  [PASS] n=4: (1) all generators odd weight; (2) DLA abelian of dimension n-2 = 2
+  [PASS] n=5: (1) all generators odd weight; (2) DLA abelian of dimension n-2 = 3
+  [PASS] n=6: (1) all generators odd weight; (2) DLA abelian of dimension n-2 = 4
+  [PASS] n=7: (1) all generators odd weight; (2) DLA abelian of dimension n-2 = 5
+  [PASS] n=8: (1) all generators odd weight; (2) DLA abelian of dimension n-2 = 6
+  [PASS] (1) the rotations are J-fixed for random theta (n=5)
+  [PASS] (3) every circuit maps |0...0> to exp(-i sum theta/2)|0...0>: output 0...0 with probability 1
+  [PASS] (4) Z1Z2Z3 is not in the real span of the quadratic monomials (least-squares residual > 0)  -- residual 5.657
+  [NOTE] (5) a ℚ-structured family that is efficiently sampleable (part 3) but not quadratic (part 4) refutes 'free fermions are the only tractable case'
+
+Section 2: 40/40 checks passed
